@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#292929" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta
+      name="description"
+      content="Gere renda investindo em imóveis em leilão com a análise e o suporte especializado da Hope Capital."
+    />
+    <title>Jornada de Qualificação | Hope Capital</title>
+
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-TN7K2QJM");
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-TN7K2QJM"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <div class="page-shell">
+      <header class="site-header" aria-label="Cabeçalho">
+        <a class="brand" href="/" aria-label="Hope Capital — início">
+          <!-- TODO: Update with real Hope Capital logo path -->
+          <img src="../assets/4ef5eda7dcb69638_hope_Capital_logo_rodape.png" alt="Hope Capital" height="40" />
+        </a>
+        <span class="header-note">Assessoria em Leilão de Imóveis</span>
+      </header>
+
+      <div class="progress-wrap" id="progress-wrap" hidden>
+        <div class="progress-copy">
+          <span id="progress-label">Seu diagnóstico</span>
+          <span id="progress-value">0%</span>
+        </div>
+        <div
+          class="progress-track"
+          role="progressbar"
+          aria-label="Progresso da qualificação"
+          aria-valuemin="0"
+          aria-valuemax="100"
+          aria-valuenow="0"
+        >
+          <span id="progress-bar"></span>
+        </div>
+      </div>
+
+      <main id="app" class="app" tabindex="-1"></main>
+
+      <footer class="site-footer">
+        <span>© 2026 Hope</span>
+        <a href="https://hopecapital.com.br/privacidade" target="_blank" rel="noopener noreferrer">
+          Política de Privacidade
+        </a>
+      </footer>
+    </div>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+    <noscript>
+      <p class="noscript-message">
+        Ative o JavaScript do navegador para preencher esta qualificação.
+      </p>
+    </noscript>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
