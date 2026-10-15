@@ -1,6 +1,10 @@
 # Arquivo local de materiais-fonte e itens não usados no deploy
 /OUT/
 
+# Materiais e workflows mantidos apenas localmente
+/form/
+/n8n/
+
 # Vercel
 .vercel/
 
@@ -23,4 +27,3 @@ Thumbs.db
 Desktop.ini
 .idea/
 .vscode/
-

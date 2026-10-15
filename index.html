@@ -851,6 +851,82 @@
       color: var(--paper);
     }
 
+    .lead-form [hidden] {
+      display: none !important;
+    }
+
+    .lead-progress {
+      margin-bottom: 28px;
+    }
+
+    .lead-progress__copy {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 8px;
+      color: rgba(255, 255, 255, 0.68);
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .lead-progress__track {
+      height: 5px;
+      overflow: hidden;
+      border-radius: 5px;
+      background: rgba(255, 255, 255, 0.15);
+    }
+
+    .lead-progress__track span {
+      display: block;
+      width: 20%;
+      height: 100%;
+      border-radius: inherit;
+      background: var(--yellow);
+      transition: width 180ms ease;
+    }
+
+    .lead-step {
+      min-height: 250px;
+    }
+
+    .lead-step .form-fieldset {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: 0;
+    }
+
+    .lead-step .form-fieldset legend {
+      margin-bottom: 18px;
+      font-size: 1rem;
+    }
+
+    .lead-actions {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-top: 24px;
+    }
+
+    .lead-actions .form-submit {
+      margin-left: auto;
+    }
+
+    .lead-back {
+      padding: 10px 0;
+      border: 0;
+      background: transparent;
+      color: rgba(255, 255, 255, 0.7);
+      cursor: pointer;
+      font-size: 0.86rem;
+      font-weight: 700;
+    }
+
+    .lead-back:hover {
+      color: var(--paper);
+    }
+
     .form-field {
       margin-bottom: 18px;
     }
@@ -887,6 +963,65 @@
       box-shadow: 0 0 0 3px rgba(240, 197, 21, 0.16);
     }
 
+    .form-fieldset {
+      margin: 0 0 22px;
+      padding: 0 0 18px;
+      border: 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .form-fieldset legend {
+      margin-bottom: 12px;
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 0.82rem;
+      font-weight: 700;
+      line-height: 1.45;
+    }
+
+    .form-option {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin: 9px 0;
+      color: rgba(255, 255, 255, 0.78);
+      font-size: 0.82rem;
+      line-height: 1.4;
+      cursor: pointer;
+    }
+
+    .form-option input {
+      width: 17px;
+      height: 17px;
+      flex: 0 0 auto;
+      margin: 1px 0 0;
+      accent-color: var(--yellow);
+    }
+
+    .form-fieldset select {
+      width: 100%;
+      height: 54px;
+      padding: 0 16px;
+      border: 1px solid rgba(240, 197, 21, 0.65);
+      border-radius: 2px;
+      background: rgba(255, 255, 255, 0.035);
+      color: var(--paper);
+      font: inherit;
+      font-size: 0.86rem;
+      outline: 0;
+      cursor: pointer;
+    }
+
+    .form-fieldset select:focus {
+      border-color: var(--yellow-bright);
+      background: rgba(255, 255, 255, 0.06);
+      box-shadow: 0 0 0 3px rgba(240, 197, 21, 0.16);
+    }
+
+    .form-fieldset select option {
+      background: var(--ink);
+      color: var(--paper);
+    }
+
     .form-submit {
       width: 100%;
       margin-top: 6px;
@@ -910,6 +1045,14 @@
 
     .form-status.is-visible {
       display: block;
+    }
+
+    .form-status.is-success {
+      color: var(--yellow);
+    }
+
+    .form-status.is-error {
+      color: #ffb0a8;
     }
 
     .site-footer {
@@ -986,34 +1129,6 @@
       border-top: 1px solid #dedede;
       color: #777777;
       font-size: 0.67rem;
-    }
-
-    .whatsapp {
-      position: fixed;
-      z-index: 40;
-      right: 24px;
-      bottom: 24px;
-      display: flex;
-      width: 58px;
-      height: 58px;
-      align-items: center;
-      justify-content: center;
-      border: 3px solid var(--paper);
-      border-radius: 50%;
-      background: #25d366;
-      color: var(--paper);
-      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.25);
-      transition: transform 180ms ease;
-    }
-
-    .whatsapp:hover {
-      transform: translateY(-3px) scale(1.04);
-    }
-
-    .whatsapp svg {
-      width: 30px;
-      height: 30px;
-      fill: currentColor;
     }
 
     .reveal {
@@ -1305,12 +1420,6 @@
         gap: 8px;
       }
 
-      .whatsapp {
-        right: 16px;
-        bottom: 16px;
-        width: 52px;
-        height: 52px;
-      }
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -1526,11 +1635,28 @@
           <p>Preencha seus dados e dê o próximo passo para investir com mais estratégia e segurança.</p>
         </div>
 
-        <div class="lead-form reveal" style="text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center;">
-          <h3 style="margin-bottom: 16px; font-size: 1.2rem;">Fale conosco pelo WhatsApp</h3>
-          <p style="margin-bottom: 24px; color: rgba(255, 255, 255, 0.74); font-size: 0.9rem;">Toque no botão abaixo para iniciar o atendimento e descobrir as melhores oportunidades em leilão.</p>
-          <a class="button" href="https://wa.me/553131510218?text=Ol%C3%A1%2C%20Hope%20Capital!%20Quero%20saber%20mais%20sobre%20investimentos%20em%20im%C3%B3veis%20de%20leil%C3%A3o." target="_blank" rel="noopener noreferrer">Falar com a Hope Capital <span class="button__arrow">→</span></a>
-        </div>
+        <form class="lead-form reveal" id="lead-form" novalidate>
+          <div class="lead-progress" aria-live="polite">
+            <div class="lead-progress__copy">
+              <span id="lead-step-label">Pergunta 1 de 5</span>
+              <span id="lead-step-value">20%</span>
+            </div>
+            <div class="lead-progress__track" aria-hidden="true"><span id="lead-progress-bar"></span></div>
+          </div>
+
+          <h3 id="lead-form-title" style="margin-bottom: 16px; font-size: 1.2rem;">Fale com a Hope Capital</h3>
+          <p id="lead-form-intro" style="margin-bottom: 24px; color: rgba(255, 255, 255, 0.74); font-size: 0.9rem;">Responda uma pergunta por vez para receber um direcionamento alinhado ao seu momento.</p>
+
+          <div id="lead-step"></div>
+
+          <div class="lead-actions">
+            <button class="lead-back" id="lead-back" type="button" hidden>← Voltar</button>
+            <button class="button form-submit" id="lead-next" type="button">Avançar <span class="button__arrow">→</span></button>
+            <button class="button form-submit" id="lead-submit" type="submit" hidden>Quero receber meu direcionamento <span class="button__arrow">→</span></button>
+          </div>
+          <p class="form-note">Ao enviar, você concorda com a <a href="https://hopecapital.com.br/privacidade" target="_blank" rel="noopener noreferrer">Política de Privacidade</a>.</p>
+          <p class="form-status" id="lead-form-status" role="status" aria-live="polite"></p>
+        </form>
       </div>
     </section>
   </main>
@@ -1548,7 +1674,7 @@
 
         <div class="footer-column">
           <h3>Atendimento</h3>
-          <a href="tel:+553131510218"><strong>Telefone/WhatsApp:</strong><br>+55 (31) 3151-0218</a>
+          <a href="tel:+553131510218"><strong>Telefone:</strong><br>+55 (31) 3151-0218</a>
           <a href="mailto:contato@hopecapital.com.br"><strong>E-mail:</strong><br>contato@hopecapital.com.br</a>
         </div>
 
@@ -1565,14 +1691,6 @@
       </div>
     </div>
   </footer>
-
-  <a class="whatsapp"
-    href="https://wa.me/553131510218?text=Ol%C3%A1%2C%20Hope%20Capital!%20Quero%20saber%20mais%20sobre%20investimentos%20em%20im%C3%B3veis%20de%20leil%C3%A3o."
-    target="_blank" rel="noopener noreferrer" aria-label="Falar com a Hope Capital pelo WhatsApp">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" aria-hidden="true" fill="currentColor">
-      <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157.1zM224 414.7h-.1c-32.9 0-65.1-8.9-93.3-25.6l-6.7-4-69.4 18.2 18.5-67.6-4.4-7C50.1 297.8 40.5 261 40.5 223.7c0-101.4 82.5-183.9 184-183.9 49.1 0 95.3 19.1 130 53.8 34.7 34.7 53.8 80.9 53.8 130-.1 101.4-82.6 183.9-184.3 183.9zM302 278.4c-4.3-2.1-25.3-12.5-29.3-13.9-3.9-1.4-6.8-2.1-9.6 2.1-2.9 4.3-11.1 13.9-13.6 16.8-2.5 2.9-5 3.2-9.3 1.1-4.3-2.1-18.1-6.7-34.4-21.4-12.7-11.5-21.3-25.7-23.7-30-2.5-4.3-.3-6.6 1.8-8.8 1.9-1.9 4.3-5 6.4-7.5 2.1-2.5 2.9-4.3 4.3-7.1 1.4-2.9 .7-5.4-.4-7.5-1.1-2.1-9.6-23.2-13.2-31.8-3.5-8.4-7-7.3-9.6-7.4-2.5-.1-5.4-.1-8.2-.1s-7.5 1.1-11.4 5.4c-3.9 4.3-15 14.6-15 35.7s15.4 41.4 17.5 44.3c2.1 2.9 30.2 46.1 73.1 64.6 10.2 4.4 18.2 7 24.5 9 10.3 3.3 19.6 2.8 27 1.7 8.2-1.2 25.3-10.4 28.9-20.4 3.6-10 3.6-18.6 2.5-20.4-1.1-1.8-3.9-2.9-8.2-5z"/>
-    </svg>
-  </a>
 
   <script>
     (() => {
@@ -1615,6 +1733,7 @@
       });
     })();
   </script>
+  <script type="module" src="./app.js"></script>
 </body>
 
 </html>
